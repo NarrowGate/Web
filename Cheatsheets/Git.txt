@@ -1,0 +1,63 @@
+Github
+
+A publishing tool
+Version control system
+collaboration platform
+
+
+git config --list
+git config --global user.name 'melvingithub'
+
+
+
+Git
+go to the folder and initialize git (command prompt git init)
+
+git status 
+git add . (adds all files and directives)
+
+check status before committing
+
+git commit -m 'message on the commit'
+
+git diff
+
+git diff --staged (run this command to see the change after adding the modified file)
+
+git branch nameofthebranch ( then you need to switch to the branch)
+git checkout nameofthebranch 
+git checkout -b bugFix (creates a branch called bugfix and checksout it at a time)
+git branch (tells you all the branches and tells you which branch you are currently on)
+
+push
+git remote add origin paste url from git
+git push -u origin master
+
+Git ignore
+# Exclude the .htaccess file
+.htaccess
+
+# Exclude any PSD/AI source
+*.psd
+*.ai
+
+# Exclude the build products
+build/*
+
+# it is equal to *.o followed by *.a
+*.[oa]
+
+# Exclude OS X folder attributes
+.DS_Store
+
+# Exclude Text files
+*.txt
+
+# Exclude read me
+!Readme.txt
+
+# Exclude log files
+*.log
+
+# Exclude Fonts
+_fonts/
