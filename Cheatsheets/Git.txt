@@ -1,16 +1,16 @@
-Github
+GITHUB
+============================================================================
 
-A publishing tool
-Version control system
-collaboration platform
-
+* A publishing tool
+* Version control system
+* collaboration platform
 
 git config --list
 git config --global user.name 'melvingithub'
 
 
-
-Git
+GIT
+=============================================================================
 go to the folder and initialize git (command prompt git init)
 
 git status 
@@ -19,21 +19,122 @@ git add . (adds all files and directives)
 check status before committing
 
 git commit -m 'message on the commit'
+git commit -am "adds and commit changes BUT DOES NOT INCLUDE DELETED AND NEWLY ADDED FILES TO STAGING AND THUS TO THE REPO"
 
-git diff
+DIFF
+----
+git diff (run this command to see the change between working dir and the repo)
+git diff --staged (run this command to see the change between staged and repo)
+git diff origin/master..master
 
-git diff --staged (run this command to see the change after adding the modified file)
+git rm (to remove a file)
+git mv first.txt second.txt (move and rename are done with mv)
 
+UNDOS
+-----
+git checkout -- index.html (-- checks out the index.html in the current/same branch)
+
+AMMENDING TO A COMMIT..
+t commit --amend -m "commit message ALSO CAN DO THE SAME TO CHANGE THE COMMIT MESSAGE"
+
+REVERT
+------
+git revert 2907d126
+
+UNSTAGE
+-------
+git reset HEAD filename.html 
+
+
+RESET (controlling the head by ourself)
+-----
+
+CHECK THE HEAD
+--------------
+melvin$ cat .git/HEAD
+ref: refs/heads/master
+melvin$ cat .git/refs/heads/master
+sha1
+
+--soft (does not change staging index or working directory)
+------
+git reset --soft sha1soft
+melvin$ cat .git/refs/heads/master
+sha1soft
+
+--mixed (default)
+-------
+	-changes staging index to match repository
+	-does not change working directory
+git reset --mixed sha1soft
+
+--hard
+------
+	-changes staging index and working directory to match repository
+git reset --mixed sha1soft
+
+Remove untracked files
+----------------------
+git clean -n 
+git clean -f
+
+
+CHECKOUT OLDER VERSION
+----------------------
+git checkout 2907d126 -- resources.html (this puts the checkout in the staging stage, not in the working directory)
+
+LOG
+---
+git log	(to list all the commits)
+git log	-n 5 (to list the last 5 commits)
+git log --since=2012-06-15 (to list commits since that date)
+git log --until=2012-06-15 (to list commits until that date)
+git log --author="melvin" (to list commits made by the author)
+git log --grep="init" (global reg exp, searches for everything that has "init")
+git log --oneline origin/master -3(commits of the copy in the remote)
+git log HEAD
+
+HEAD
+----
+pointer to "tip" of current branch in repository
+last state of repository, what was last checked out
+points to parent of next commit
+
+BRANCH
+------
 git branch nameofthebranch ( then you need to switch to the branch)
 git checkout nameofthebranch 
 git checkout -b bugFix (creates a branch called bugfix and checksout it at a time)
 git branch (tells you all the branches and tells you which branch you are currently on)
 
-push
+
+REMOTE
+------
 git remote add origin paste url from git
+git remote rm origin
+git remote -v
+git clone https://url folderPath
+
+FETCH
+-----
+* fetch before you work
+* fetch before you push
+* fetch often
+
+git fetch (just syncs the remote repo with origin/master not the master)
+git merge origin/master
+
+PULL
+----
+git pull = git fetch + git merge
+
+PUSH
+----
 git push -u origin master
 
-Git ignore
+
+GIT IGNORE
+----------
 # Exclude the .htaccess file
 .htaccess
 
