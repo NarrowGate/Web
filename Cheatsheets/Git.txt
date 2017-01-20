@@ -26,6 +26,10 @@ DIFF
 git diff (run this command to see the change between working dir and the repo)
 git diff --staged (run this command to see the change between staged and repo)
 git diff origin/master..master
+git diff —color-words new_feature..shorten_title
+git diff mybranch master – path/myfile.cs
+
+
 
 git rm (to remove a file)
 git mv first.txt second.txt (move and rename are done with mv)
@@ -35,7 +39,7 @@ UNDOS
 git checkout -- index.html (-- checks out the index.html in the current/same branch)
 
 AMMENDING TO A COMMIT..
-t commit --amend -m "commit message ALSO CAN DO THE SAME TO CHANGE THE COMMIT MESSAGE"
+git commit --amend -m "commit message ALSO CAN DO THE SAME TO CHANGE THE COMMIT MESSAGE"
 
 REVERT
 ------
@@ -106,7 +110,22 @@ git branch nameofthebranch ( then you need to switch to the branch)
 git checkout nameofthebranch 
 git checkout -b bugFix (creates a branch called bugfix and checksout it at a time)
 git branch (tells you all the branches and tells you which branch you are currently on)
+git branch -m or —move new_feature seo_title (to rename branch)
+git branch —merged (all branches that are completely included)
+delete branch
+branch -d(—delete) branch_to_delete (be on the master )
+D (caps d) deletes the branch irrespective of whether the branch is merged
 
+Merging
+from master git merge seo_title
+git merge —no-ff branch
+git merge —ff-only branch
+
+to often update branch with master
+git merge master or git rebase master
+
+conficts
+git merge —abort
 
 REMOTE
 ------
@@ -114,6 +133,24 @@ git remote add origin paste url from git
 git remote rm origin
 git remote -v
 git clone https://url folderPath
+
+git remote works just like git branch gives all the remotes
+git remote add (to add new remote)
+git remote add origin url
+git remote -v (shows urls for fetching and pushing)
+git remote rm origin
+
+
+git branch -r (shows all the remotes)
+git branch -a (shows all)
+
+git branch non_tracking origin/non_tracking (gets a remote branch to local and names non_tracking)
+git checkout -b non_tracking origin/non_tracking
+
+deleting a remote branch
+git push origin :non_tracking
+or
+git push origin —delete non_tracking
 
 FETCH
 -----
@@ -132,6 +169,9 @@ PUSH
 ----
 git push -u origin master
 
+cloning from remote assuming we don’t have a local copy
+git clone url
+git clone url lynda_version (create a dir lynda_version)
 
 GIT IGNORE
 ----------
