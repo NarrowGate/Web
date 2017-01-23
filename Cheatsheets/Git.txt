@@ -28,8 +28,8 @@ git diff --staged (run this command to see the change between staged and repo)
 git diff origin/master..master
 git diff —color-words new_feature..shorten_title
 git diff mybranch master – path/myfile.cs
-
-
+git diff --name-status master..branchName
+get all the file names that are changed between these branches
 
 git rm (to remove a file)
 git mv first.txt second.txt (move and rename are done with mv)
