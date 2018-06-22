@@ -3,7 +3,7 @@ GITHUB
 
 * A publishing tool
 * Version control system
-* collaboration platform
+* collaboration platform ssss
 
 git config --list
 git config --global user.name 'melvingithub'
@@ -26,8 +26,8 @@ DIFF
 git diff (run this command to see the change between working dir and the repo)
 git diff --staged (run this command to see the change between staged and repo)
 git diff origin/master..master
-git diff —color-words new_feature..shorten_title
-git diff mybranch master – path/myfile.cs
+git diff ï¿½color-words new_feature..shorten_title
+git diff mybranch master ï¿½ path/myfile.cs
 git diff --name-status master..branchName
 get all the file names that are changed between these branches
 
@@ -110,22 +110,22 @@ git branch nameofthebranch ( then you need to switch to the branch)
 git checkout nameofthebranch 
 git checkout -b bugFix (creates a branch called bugfix and checksout it at a time)
 git branch (tells you all the branches and tells you which branch you are currently on)
-git branch -m or —move new_feature seo_title (to rename branch)
-git branch —merged (all branches that are completely included)
+git branch -m or ï¿½move new_feature seo_title (to rename branch)
+git branch ï¿½merged (all branches that are completely included)
 delete branch
-branch -d(—delete) branch_to_delete (be on the master )
+branch -d(ï¿½delete) branch_to_delete (be on the master )
 D (caps d) deletes the branch irrespective of whether the branch is merged
 
 Merging
 from master git merge seo_title
-git merge —no-ff branch
-git merge —ff-only branch
+git merge ï¿½no-ff branch
+git merge ï¿½ff-only branch
 
 to often update branch with master
 git merge master or git rebase master
 
 conficts
-git merge —abort
+git merge ï¿½abort
 
 REMOTE
 ------
@@ -150,7 +150,7 @@ git checkout -b non_tracking origin/non_tracking
 deleting a remote branch
 git push origin :non_tracking
 or
-git push origin —delete non_tracking
+git push origin ï¿½delete non_tracking
 
 FETCH
 -----
@@ -169,7 +169,7 @@ PUSH
 ----
 git push -u origin master
 
-cloning from remote assuming we don’t have a local copy
+cloning from remote assuming we donï¿½t have a local copy
 git clone url
 git clone url lynda_version (create a dir lynda_version)
 
