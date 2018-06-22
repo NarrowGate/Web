@@ -3,7 +3,7 @@ GITHUB
 
 * A publishing tool
 * Version control system
-* collaboration platform ssss
+* collaboration platform ss
 
 git config --list
 git config --global user.name 'melvingithub'
