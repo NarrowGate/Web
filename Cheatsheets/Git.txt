@@ -3,7 +3,7 @@ GITHUB
 
 * A publishing tool
 * Version control system
-* collaboration platform sssss
+* collaboration platform
 
 git config --list
 git config --global user.name 'melvingithub'
@@ -16,7 +16,7 @@ go to the folder and initialize git (command prompt git init)
 git status 
 git add . (adds all files and directives)
 
-check status before committing
+check status before committingp
 
 git commit -m 'message on the commit'
 git commit -am "adds and commit changes BUT DOES NOT INCLUDE DELETED AND NEWLY ADDED FILES TO STAGING AND THUS TO THE REPO"
