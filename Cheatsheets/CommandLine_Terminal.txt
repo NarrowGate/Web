@@ -1,0 +1,18 @@
+Windows
+cd 
+cd..
+dir
+Open from folder - Alt + d type cmd on folder address bar
+mkdir foldername
+rmdir foldername
+
+
+
+
+Mac
+cd
+cd ..
+ls
+Open from folder - right click on folder and select from menu
+mkdir foldername
+rmdir foldername
